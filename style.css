@@ -1,0 +1,184 @@
+           
+html , input , button {
+    font-family: "Vazir" !important;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.myplayer {
+    position: relative;
+    display: flex;
+    direction: ltr;
+    overflow: hidden;
+    transition: .2s all;
+}
+
+.myplayer video {
+    width: 100%;
+}
+
+.myplayer .myplayer__controls {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+
+}
+
+.myplayer .controls__progressbar {
+    height: 6px;
+    background: #2427f5;
+    width: 100%;
+}
+
+
+.myplayer .controls__progressbar-current {
+    -webkit-appearance: none;   
+    -moz-apperance: none;
+    height: 6px;
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    
+    background: linear-gradient(90deg, rgb(26, 113, 243) 0%, #05d4db 0%);
+}
+
+.myplayer .controls__progressbar-current::-moz-range-track {
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.myplayer .controls__progressbar-current:focus {
+    outline: none;
+    border: none;
+}
+
+.myplayer .controls__progressbar-current::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    background-color: transparent;
+    height: 6px;
+    width: 6px;
+}
+
+.volume__progress .controls__progressbar-current::-moz-range-thumb {
+    -moz-appearance: none !important;
+    background-color: transparent;
+    border: none;
+    height: 6px;
+    width: 6px;
+}
+
+.myplayer:hover .controls__btns {
+    display: flex;
+}
+
+.myplayer .controls__btns {
+    margin: 10px 15px;
+    color: white;
+    align-items: center;
+    justify-content:space-between;
+    display: none;
+}
+
+.myplayer .controls__btns .right , .myplayer .controls__btns .left {
+    display: flex;
+    align-items: center;
+}
+
+.myplayer .controls__btns .btns {
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+.myplayer .controls__btns .left .btns:not(:first-child) {
+    margin-left : 20px;
+}
+
+.myplayer .controls__btns .right .btns:not(:last-child) {
+    margin-right: 20px;
+}
+
+.myplayer .btns.play {
+    color: white;
+}
+
+.myplayer .btns.volume {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.myplayer .volume__progress {
+    transform: rotate(-90deg);
+    position: absolute;
+    top: -50px;
+    display: none;
+}
+
+.myplayer .volume__progress.active {
+    display: block;
+}
+
+
+.myplayer .volume__progress.avtive {
+    display: block;
+}
+
+.myplayer .volume__progress input[type=range] {
+    display: flex;
+}
+
+.myplayer .timer {
+    margin-left: 20px;
+}
+
+.volume__progress input[type=range] {
+    -webkit-appearance: none;
+    -moz-apperance: none;
+    border-radius: 6px;
+    height: 6px;
+    width: 77px;
+
+    background: linear-gradient(90deg, rgb(99, 0, 212) 50%, #202cd3 0%);
+}
+
+.volume__progress input[type="range"]::-moz-range-track {
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.volume__progress input[type=range]:focus {
+    outline: none;
+    border: none;
+}
+
+.volume__progress input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    background-color: #202cd3;
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+}
+
+.volume__progress input[type=range]::-moz-range-thumb {
+    -moz-appearance: none !important;
+    background-color: #202cd3;
+    border: none;
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+}
+
+.myplayer{
+    border-radius: 15px;
+}
